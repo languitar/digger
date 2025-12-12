@@ -599,7 +599,8 @@ runs:
 
         echo "Downloading from: $DOWNLOAD_URL"
 
-        if ! curl -sL --fail "$DOWNLOAD_URL" -o digger; then
+        ls -lah
+        if ! curl -L --fail "$DOWNLOAD_URL" -o digger; then
           echo "Failed to download Digger CLI from $DOWNLOAD_URL"
           echo ""
           echo "Possible reasons:"
